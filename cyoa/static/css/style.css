@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition: all .2s linear;
+   text-transform: capitalize;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body{
+   background: #eee;
+}
+
+p {
+   padding: 1rem 2rem;
+   text-indent: 30px;
+}
+
+.container{
+   max-width: 1200px;
+   margin:0 auto;
+   padding:3rem 2rem;
+}
+
+.container .title{
+   font-size: 3.5rem;
+   color:#444;
+   margin-bottom: 3rem;
+   text-transform: uppercase;
+   /* text-align: center; */
+}
+
+.container .stories-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+   padding: 5rem 5rem;
+}
+
+.container .stories-container .story{
+   /* text-align: center; */
+   padding:3rem 5rem;
+   background: #fff;
+   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+   outline: .1rem solid #ccc;
+   outline-offset: -1.5rem;
+   cursor: pointer;
+   border-radius: 20px;
+}
+
+
+.container .stories-container .story:hover{
+   outline: .2rem solid #222;
+   outline-offset: 0;
+}
+
+.container .stories-container .story img{
+   height: 25rem;
+}
+
+.container .stories-container .story:hover img{
+   transform: scale(.9);
+}
+
+.container .stories-container .story h3{
+   padding:.5rem 0;
+   font-size: 3rem;
+   color:#444;
+   text-align:center;
+}
+
+.container .stories-container .story:hover h3{
+   color:#27ae60;
+}
+
+.container .stories-container .story .next-arc{
+   font-size: 2rem;
+   color:#444;
+}
+
+.stories-preview{
+   position: fixed;
+   top:0; left:0;
+   min-height: 100vh;
+   width: 100%;
+   background: rgba(0,0,0,.8);
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+
+.stories-preview .preview{
+   display: none;
+   padding:2rem;
+   /* text-align: center; */
+   background: #fff;
+   position: relative;
+   margin:2rem;
+   width: 40rem;
+}
+
+.stories-preview .preview.active{
+   display: inline-block;
+}
+
+.stories-preview .preview img{
+   height: 30rem;
+}
+
+.stories-preview .preview .fa-times{
+   position: absolute;
+   top:1rem; right:1.5rem;
+   cursor: pointer;
+   color:#444;
+   font-size: 4rem;
+}
+
+.stories-preview .preview .fa-times:hover{
+   transform: rotate(90deg);
+}
+
+.stories-preview .preview h3{
+   color:#444;
+   padding:.5rem 0;
+   font-size: 2.5rem;
+}
+
+.stories-preview .preview .stars{
+   padding:1rem 0;
+   font-size: 1.7rem;
+}
+
+.stories-preview .preview .stars i{
+   color:#27ae60;
+}
+
+.stories-preview .preview .stars span{
+   color:#999;
+}
+
+.stories-preview .preview p{
+   line-height: 1.5;
+   padding:1rem 0;
+   font-size: 1.6rem;
+   color:#777;
+}
+
+.stories-preview .preview .next-arc{
+   padding:1rem 0;
+   font-size: 2.5rem;
+   color:#27ae60;
+}
+
+.stories-preview .preview .buttons{
+   display: flex;
+   gap:1.5rem;
+   flex-wrap: wrap;
+   margin-top: 1rem;
+}
+
+.stories-preview .preview .buttons a{
+   flex:1 1 16rem;
+   padding:1rem;
+   font-size: 1.8rem;
+   color:#444;
+   border:.1rem solid #444;
+}
+
+.stories-preview .preview .buttons a.cart{
+   background: #444;
+   color:#fff;
+}
+
+.stories-preview .preview .buttons a.cart:hover{
+   background: #111;
+}
+
+.stories-preview .preview .buttons a.buy:hover{
+   background: #444;
+   color:#fff;
+}
+
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px){
+
+   .stories-preview .preview img{
+      height: 25rem;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+}
